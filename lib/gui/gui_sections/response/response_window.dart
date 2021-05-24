@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lf/notifiers/response_notifier.dart';
+import 'package:provider/provider.dart';
 
 class ResponseWindow extends StatelessWidget {
   const ResponseWindow({
@@ -12,9 +14,11 @@ class ResponseWindow extends StatelessWidget {
       child: Container(
         width: double.infinity,
         color: Colors.purple[50],
-        child: Padding(
-          padding: EdgeInsets.all(20),
-          child: Text('response'),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(20),
+            child: context.watch<ResponseNotifier>().responseWindowContents,
+          ),
         ),
       ),
     );
