@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lf/notifiers/request_notifier.dart';
+import 'package:provider/provider.dart';
 
 import 'request_button_group.dart';
 import 'request_settings_window.dart';
@@ -22,6 +24,13 @@ class RequestWindow extends StatelessWidget {
               height: 10,
             ),
             RequestButtonGroup(),
+            Text(
+              context
+                  .watch<RequestNotifier>()
+                  .pictureDownloadNumber
+                  .ceil()
+                  .toString(),
+            ),
             RequestSettingsWindow(),
           ],
         ),

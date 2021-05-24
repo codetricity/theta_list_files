@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lf/gui/gui_components/list_files_button.dart';
 
 class RequestButtonGroup extends StatelessWidget {
   const RequestButtonGroup({
@@ -7,11 +8,11 @@ class RequestButtonGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        print('starting process to list files');
-      },
-      child: Text('list files'),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        ListFilesButton(),
+      ],
     );
   }
 }
