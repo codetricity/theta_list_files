@@ -23,4 +23,14 @@ class RequestNotifier extends ChangeNotifier {
     _getThumbFlag = getThumbFlag;
     notifyListeners();
   }
+
+  /// URL for main image
+
+  String _imageUrl =
+      'https://raw.githubusercontent.com/codetricity/theta_provider_tutorial/main/assets/images/R0011911.JPG';
+  String get imageUrl => _imageUrl;
+  void updateImageUrl(imageUrl) {
+    _imageUrl = imageUrl;
+    notifyListeners();
+  }
 }

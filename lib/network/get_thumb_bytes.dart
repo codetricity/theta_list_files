@@ -1,10 +1,9 @@
 import 'dart:convert';
-import 'dart:typed_data';
-
+import 'package:lf/model/thumb_info.dart';
 import 'package:lf/network/list_files_request.dart';
 import 'package:http/http.dart' as http;
 
-Future<List<Uint8List>> getThumbBytes(double thumbNumber) async {
+Future<List<ThumbInfo>> getThumbBytes(double thumbNumber) async {
   var fileListing = await listFilesRequest(thumbNumber);
   var fileMap = jsonDecode(fileListing);
   List<String> urlList = [];
@@ -14,21 +13,23 @@ Future<List<Uint8List>> getThumbBytes(double thumbNumber) async {
     urlList.add(entry['fileUrl']);
   }
 
-  List<Uint8List> thumbByteList = [];
+  List<ThumbInfo> thumbInfoList = [];
 
   var client = http.Client();
 
   for (String url in urlList) {
-    url = url + 'type=thumb';
-    Uri uri = Uri.parse(url);
+    var thumbUrl = url + 'type=thumb';
+    Uri uri = Uri.parse(thumbUrl);
     try {
       final imageData = await client.get(uri);
-      thumbByteList.add(imageData.bodyBytes);
+      thumbInfoList.add(
+        ThumbInfo(thumbBytes: imageData.bodyBytes, url: url),
+      );
     } catch (error) {
       print(error);
       break;
     }
   }
   client.close();
-  return thumbByteList;
+  return thumbInfoList;
 }

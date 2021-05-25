@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lf/notifiers/response_notifier.dart';
 import 'package:provider/provider.dart';
+import 'gui/gui_screens/image_screen.dart';
 import 'notifiers/request_notifier.dart';
 import 'gui/gui_screens/home_screen.dart';
 
@@ -21,7 +22,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/image': (context) => ImageScreen()
+      },
+      initialRoute: '/',
     );
   }
 }
