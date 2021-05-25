@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-Future<String> listFilesRequest(listFilesNumber) async {
+Future<String> listFilesRequest(double listFilesNumber) async {
   // test
   // Uri uri = Uri.parse('https://jsonplaceholder.typicode.com/posts');
   Uri uri = Uri.parse('http://192.168.1.1/osc/commands/execute');
@@ -13,7 +13,7 @@ Future<String> listFilesRequest(listFilesNumber) async {
     'name': 'camera.listFiles',
     'parameters': {
       'fileType': 'image',
-      'entryCount': listFilesNumber,
+      'entryCount': listFilesNumber.ceil(),
       'maxThumbsize': 0
     }
   };

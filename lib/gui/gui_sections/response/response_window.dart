@@ -14,12 +14,7 @@ class ResponseWindow extends StatelessWidget {
       child: Container(
         width: double.infinity,
         color: Colors.purple[50],
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: context.watch<ResponseNotifier>().responseWindowContents,
-          ),
-        ),
+        child: context.watch<ResponseNotifier>().responseWindowContents,
       ),
     );
   }
