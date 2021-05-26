@@ -15,6 +15,9 @@ in the API
 
 ## Architecture
 
+[Discussion on Reddit](https://www.reddit.com/r/FlutterDev/comments/nl1qb5/architecture_patterns_for_flutter_applications/)
+
+
 ### Idea 1
 
 
