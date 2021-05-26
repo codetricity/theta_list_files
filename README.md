@@ -11,8 +11,6 @@ another state management system in the future
 in the API
 * improve separation of network and data processing code from the buttons in the gui
 
-
-
 ---
 
 ## Plans
@@ -31,4 +29,5 @@ Considering moving to the following architecture.
   * local storage (for example if on Windows desktop, the pictures folder)
   * fundamental http connection, error handling
   * firebase
+* state
   * ChangeNotifiers (I'm using provider)

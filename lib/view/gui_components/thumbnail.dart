@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:lf/notifiers/request_notifier.dart';
+import 'package:lf/controller/notifiers/request_notifier.dart';
 import 'package:provider/provider.dart';
 
 class ThumbNail extends StatelessWidget {

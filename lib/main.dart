@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lf/notifiers/response_notifier.dart';
+import 'controller/notifiers/response_notifier.dart';
 import 'package:provider/provider.dart';
-import 'gui/gui_screens/image_screen.dart';
-import 'notifiers/request_notifier.dart';
-import 'gui/gui_screens/home_screen.dart';
+
+import 'view/gui_screens/image_screen.dart';
+import 'controller/notifiers/request_notifier.dart';
+import 'view/gui_screens/home_screen.dart';
 
 void main() {
   runApp(

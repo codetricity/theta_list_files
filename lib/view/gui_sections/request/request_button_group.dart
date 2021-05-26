@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lf/gui/gui_components/list_files_button.dart';
+import 'package:lf/view/gui_components/list_files_button.dart';
 
 class RequestButtonGroup extends StatelessWidget {
   const RequestButtonGroup({

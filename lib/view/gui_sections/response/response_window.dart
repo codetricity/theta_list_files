@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lf/notifiers/response_notifier.dart';
+import 'package:lf/controller/notifiers/response_notifier.dart';
 import 'package:provider/provider.dart';
 
 class ResponseWindow extends StatelessWidget {

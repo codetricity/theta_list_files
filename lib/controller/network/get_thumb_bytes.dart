@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:lf/model/thumb_info.dart';
-import 'package:lf/network/list_files_request.dart';
+import 'package:lf/controller/network/list_files_request.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<ThumbInfo>> getThumbBytes(double thumbNumber) async {
