@@ -17,6 +17,7 @@ in the API
 
 ### Idea 1
 
+
 ![app architecture](docs/images/architecture.png)
 
 ### Idea 2
@@ -35,3 +36,9 @@ in the API
   * firebase
 * state
   * ChangeNotifiers (I'm using provider)
+
+## Reference
+
+* [Design Patterns in Flutter- Part 1(MVC) by Yashwant Kumar](https://medium.com/flutterdevs/design-patterns-in-flutter-part-1-c32a3ddb00e2)
+* [A Design Pattern for Flutter by Greg Perry](https://medium.com/follow-flutter/a-design-pattern-for-flutter-db6ccaea2413)
+
