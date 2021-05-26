@@ -7,9 +7,16 @@
 * advance fundamental understanding of application architecture
 * increase experience with state management using provider, though we may move to
 another state management system in the future
-* sharable example of using thumbnails with the RICOH THETA SC2 as there is a bug
-in the API
+* produce sharable example of using thumbnails with the RICOH THETA SC2
+  * there is a bug in the API
 * improve separation of network and data processing code from the buttons in the gui
+
+## Project Expected Benefits
+
+* usable code example to promote RICOH THETA SC2 API
+* basis for content around SC2 API, likely post on Discourse
+* basis for executive or manager-level high level overview content on architectural
+concepts for third-party sites
 
 ---
 
@@ -17,9 +24,7 @@ in the API
 
 [Discussion on Reddit](https://www.reddit.com/r/FlutterDev/comments/nl1qb5/architecture_patterns_for_flutter_applications/)
 
-
 ### Idea 1
-
 
 ![app architecture](docs/images/architecture.png)
 
@@ -44,4 +49,3 @@ in the API
 
 * [Design Patterns in Flutter- Part 1(MVC) by Yashwant Kumar](https://medium.com/flutterdevs/design-patterns-in-flutter-part-1-c32a3ddb00e2)
 * [A Design Pattern for Flutter by Greg Perry](https://medium.com/follow-flutter/a-design-pattern-for-flutter-db6ccaea2413)
-
