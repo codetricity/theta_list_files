@@ -13,9 +13,13 @@ in the API
 
 ---
 
-## Plans
+## Architecture
 
-Considering moving to the following architecture.
+### Idea 1
+
+![app architecture](docs/images/architecture.png)
+
+### Idea 2
 
 * model - it's sparse
 * view
