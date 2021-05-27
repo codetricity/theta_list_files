@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:lf/controller/network/get_thumb_bytes.dart';
-import 'package:lf/controller/network/list_files_request.dart';
-import 'package:lf/controller/notifiers/request_notifier.dart';
-import 'package:lf/controller/notifiers/response_notifier.dart';
+import 'package:lf/commands/get_thumb_bytes.dart';
+import 'package:lf/commands/list_files_request.dart';
+import 'package:lf/models/request_notifier.dart';
+import 'package:lf/models/response_notifier.dart';
 import 'package:provider/provider.dart';
 
 import 'thumbnail.dart';

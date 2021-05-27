@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lf/controller/notifiers/request_notifier.dart';
+import 'package:lf/models/request_notifier.dart';
 import 'package:provider/provider.dart';
 
 class RequestSettingsWindow extends StatelessWidget {
