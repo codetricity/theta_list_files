@@ -30,7 +30,6 @@ concepts for third-party sites
 
 ![example strategy](https://blog.gskinner.com/wp-content/uploads/2020/09/ApplicationFrameHost_2020-09-09_09-07-401.png)
 
-
 #### Controller
 
 * application-level commands initiated from the button
@@ -46,7 +45,7 @@ concepts for third-party sites
 
 ![app architecture v2](docs/images/architecture_v2.png)
 
-* model 
+* model
   * ChangeNotifiers (provider)
 * view
   * gui sections
