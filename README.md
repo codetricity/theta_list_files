@@ -41,7 +41,13 @@ concepts for third-party sites
 * parse and return data
 * services do not touch the model
 
+### Classic MVC
+
+![MVC classic](docs/images/mvc_class.png)
+
 ### Architecture for thumbnail project
+
+Based on MVC+S as explained in gskinner article.
 
 ![app architecture v2](docs/images/architecture_v2.png)
 
