@@ -24,7 +24,7 @@ concepts for third-party sites
 
 [Discussion on Reddit](https://www.reddit.com/r/FlutterDev/comments/nl1qb5/architecture_patterns_for_flutter_applications/)
 
-### Reference Template for Architectural
+### Reference Template for MVC+S Architecture
 
 [organization example from gskinner](https://blog.gskinner.com/archives/2020/09/flutter-state-management-with-mvcs.html)
 
