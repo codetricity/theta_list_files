@@ -45,7 +45,8 @@ concepts for third-party sites
 
 ### Idea 2
 
-* model - it's sparse
+* model 
+  * ChangeNotifiers (provider)
 * view
   * gui sections
     * screens and windows (portion of screen)
@@ -57,8 +58,6 @@ concepts for third-party sites
   * local storage (for example if on Windows desktop, the pictures folder)
   * fundamental http connection, error handling
   * firebase
-* state
-  * ChangeNotifiers (I'm using provider)
 
 ## Reference
 
