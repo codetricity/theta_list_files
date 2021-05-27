@@ -24,13 +24,12 @@ concepts for third-party sites
 
 [Discussion on Reddit](https://www.reddit.com/r/FlutterDev/comments/nl1qb5/architecture_patterns_for_flutter_applications/)
 
-### Idea 1
+### Reference Template for Architectural
 
 [organization example from gskinner](https://blog.gskinner.com/archives/2020/09/flutter-state-management-with-mvcs.html)
 
 ![example strategy](https://blog.gskinner.com/wp-content/uploads/2020/09/ApplicationFrameHost_2020-09-09_09-07-401.png)
 
-![app architecture v2](docs/images/architecture_v2.png)
 
 #### Controller
 
@@ -43,7 +42,9 @@ concepts for third-party sites
 * parse and return data
 * services do not touch the model
 
-### Idea 2
+### Architecture for thumbnail project
+
+![app architecture v2](docs/images/architecture_v2.png)
 
 * model 
   * ChangeNotifiers (provider)
@@ -53,7 +54,7 @@ concepts for third-party sites
   * gui components like buttons
 * controller
   * manage the http response. build the data that is shown on the response window. send it to view.
-  * individual http API request templates that are triggered and populated from view. there are so many...
+  * individual http API request templates that are triggered and populated from view
 * services
   * local storage (for example if on Windows desktop, the pictures folder)
   * fundamental http connection, error handling
