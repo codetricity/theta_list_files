@@ -26,7 +26,22 @@ concepts for third-party sites
 
 ### Idea 1
 
-![app architecture](docs/images/architecture.png)
+[organization example from gskinner](https://blog.gskinner.com/archives/2020/09/flutter-state-management-with-mvcs.html)
+
+![example strategy](https://blog.gskinner.com/wp-content/uploads/2020/09/ApplicationFrameHost_2020-09-09_09-07-401.png)
+
+![app architecture v2](docs/images/architecture_v2.png)
+
+#### Controller
+
+* application-level commands initiated from the button
+* can be chained together from the button press
+
+#### Services
+
+* external API calls
+* parse and return data
+* services do not touch the model
 
 ### Idea 2
 
