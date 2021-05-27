@@ -49,7 +49,7 @@ concepts for third-party sites
 
 Based on MVC+S as explained in gskinner article.
 
-![app architecture v2](docs/images/architecture_v2.png)
+![app architecture v3](docs/images/architecture_v3.png)
 
 * model
   * ChangeNotifiers (provider)
