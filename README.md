@@ -1,6 +1,12 @@
 # THETA List Files Demonstration
 
+## List Files and Thumbnails
+
 ![screenshot](docs/images/screenshot.gif)
+
+## Show 360 Image with Navigation on Separate Screen
+
+![full size image with navigation](docs/images/full_size_image.gif)
 
 ## Project Goals
 
