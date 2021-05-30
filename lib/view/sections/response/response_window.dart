@@ -13,7 +13,7 @@ class ResponseWindow extends StatelessWidget {
       flex: 2,
       child: Container(
         width: double.infinity,
-        color: Colors.purple[50],
+        color: Color(0xfffff8e1),
         child: context.watch<ResponseNotifier>().responseWindowContents,
       ),
     );

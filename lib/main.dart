@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lf/view/screens/admin/admin_screen_main.dart';
 import 'models/response_notifier.dart';
 import 'package:provider/provider.dart';
 
 import 'view/screens/image_screen.dart';
 import 'models/request_notifier.dart';
-import 'view/screens/home_screen.dart';
+import 'view/screens/home/home_screen.dart';
 
 void main() {
   runApp(
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => HomeScreen(),
-        '/image': (context) => ImageScreen()
+        '/image': (context) => ImageScreen(),
+        'admin': (context) => AdminScreen(),
       },
       initialRoute: '/',
     );

@@ -119,7 +119,19 @@ of commands easier in the future.
 ### eBay Motors
 
 * separate package for each major screen
-* independently testable
+* each package was independently testable
+* packages allowed each team to work on a separate screen without
+interfering with the other teams
+* each package exposed a widget, which was the entire screen with defined dependencies to fulfill its purpose. Everything else is private.
+* main criteria were 1) package boundaries; 2) 100% test coverage with 
+the package's public API.
+* started using BLoC. moved to stateful widgets
+* after 2 years, 240,000 lines of code, 5,000 tests, 80 packages
+* can swap out the state management due to the boundaries of each package
+and the simple public API that only exposes the information needed for the
+package to function.
+
+
 
 ## To Do
 
