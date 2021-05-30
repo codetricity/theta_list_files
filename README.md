@@ -27,8 +27,9 @@ and the most recent stable version of Flutter:
 
 ## Project Goals
 
-* advance fundamental understanding of Flutter application architecture
-* increase experience with state management using provider, though we may move to
+* provide example of scalable Flutter application architecture for RICOH THETA mobile apps
+  * previous examples became too confusing as the number of commands increased
+* show example of http request/response state management using provider, though we may move to
 another state management system in the future.
   * alternatives under consideration: BLoC and GetX
 * produce sharable example of using thumbnails with the RICOH THETA SC2
@@ -44,6 +45,13 @@ another state management system in the future.
 * technical how to for SC2 API - article on theta360.guide site
 * high level architectural concepts on how to structure RICOH THETA apps
 with Flutter - blog. concepts usable for any app with http connection.
+
+
+## Design Considerations
+
+Choose the simplest and most common approach that meets the goals. For example,
+MVC is one of the oldest and most common architectural paradigms.  Provider is the
+easist and most state management approaches.
 
 ---
 
@@ -90,11 +98,14 @@ of commands easier in the future.
   * build the data that is shown on the response window. send it to view.
   * individual commands that are triggered and populated from view
   * data structures used by commands
+  * commands (utility functions) that are trigged by other commands
 * services
-  * manage http request and pass response to commands
-  * local storage (for example if on Windows desktop, the pictures folder)
-  * fundamental http connection, error handling
-  * firebase
+  * fundamental http connection, error handling, common across multiple services such as get info, listFiles
+    * manage http request and pass response to commands
+  * service that combines multiple services into a single abstraction such as "get thumb bytes". Example: external service (such as http network) functionality through multiple http network requests, one request per thumbnail. 
+  * Other examples of services not covered in this app
+    * local storage (for example if on Windows desktop, the pictures folder)
+    * firebase
 
 ## Reference
 
