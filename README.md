@@ -8,25 +8,46 @@
 
 ![full size image with navigation](docs/images/full_size_image.gif)
 
+## Project Overview
+
+Demonstration of using Flutter to communicate with the RICOH THETA 360 camera.
+Flutter recently moved to 2.2 (after moving to 2.0 only a few months before)
+and dart 2.13.  The demonstration code shows the use of the following technology
+as a test to make sure the new packages still work with the RICOH THETA
+and the most recent stable version of Flutter:
+
+* Flutter 2.2
+* Dart 2.13 with sound null-safety
+* http: ^0.13.3 - network connection with camera
+  * alternative dio not tested
+* provider: ^5.0.0 - state management
+  * alternatives: GetX, BLoC not tested
+* panorama: ^0.4.1
+
+
 ## Project Goals
 
-* advance fundamental understanding of application architecture
+* advance fundamental understanding of Flutter application architecture
 * increase experience with state management using provider, though we may move to
-another state management system in the future
+another state management system in the future.
+  * alternatives under consideration: BLoC and GetX
 * produce sharable example of using thumbnails with the RICOH THETA SC2
   * there is a bug in the API
 * improve separation of network and data processing code from the buttons in the gui
+* test http package, which as some limitations for RICOH THETA development
+  * digest authentication does not work with the THETA - not implemented in this app
+  * motionJPEG livePreview does not work with the V and Z1 - not implemented
 
-## Project Expected Benefits
+## Planned Educational Assets to Help Developers
 
-* usable code example to promote RICOH THETA SC2 API
-* basis for content around SC2 API, likely post on Discourse
-* basis for executive or manager-level high level overview content on architectural
-concepts for third-party sites
+* usable code example for a gentle introduction  to RICOH THETA SC2 API - this GitHub repo
+* technical how to for SC2 API - article on theta360.guide site
+* high level architectural concepts on how to structure RICOH THETA apps
+with Flutter - blog. concepts usable for any app with http connection.
 
 ---
 
-## Architecture
+## App Architecture
 
 [Discussion on Reddit](https://www.reddit.com/r/FlutterDev/comments/nl1qb5/architecture_patterns_for_flutter_applications/)
 
