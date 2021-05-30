@@ -29,13 +29,12 @@ and the most recent stable version of Flutter:
 
 * provide example of scalable Flutter application architecture for RICOH THETA mobile apps
   * previous examples became too confusing as the number of commands increased
-* show example of http request/response state management using provider, though we may move to
-another state management system in the future.
-  * alternatives under consideration: BLoC and GetX
+* show example of http request/response state management using provider
+  * alternative state management approaches under consideration: BLoC and GetX
 * produce sharable example of using thumbnails with the RICOH THETA SC2
   * there is a bug in the API
 * improve separation of network and data processing code from the buttons in the gui
-* test http package, which as some limitations for RICOH THETA development
+* test http package, which has some limitations for RICOH THETA development
   * digest authentication does not work with the THETA - not implemented in this app
   * motionJPEG livePreview does not work with the V and Z1 - not implemented
 
@@ -109,6 +108,7 @@ of commands easier in the future.
 
 ## Reference
 
+* [eBay Motors](https://medium.com/ebaytech/ebay-motors-state-management-bd85cfc602a2)
 * [Design Patterns in Flutter- Part 1(MVC) by Yashwant Kumar](https://medium.com/flutterdevs/design-patterns-in-flutter-part-1-c32a3ddb00e2)
 * [A Design Pattern for Flutter by Greg Perry](https://medium.com/follow-flutter/a-design-pattern-for-flutter-db6ccaea2413)
 * [Flutter: State Management using an MVC+S Architecture by Shawn Blais, Sept 14, 2020](https://blog.gskinner.com/archives/2020/09/flutter-state-management-with-mvcs.html)
