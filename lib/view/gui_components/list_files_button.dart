@@ -1,8 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:lf/commands/get_thumb_bytes.dart';
-import 'package:lf/commands/list_files_request.dart';
+import 'package:lf/commands/list_files_command.dart';
 import 'package:lf/models/request_notifier.dart';
 import 'package:lf/models/response_notifier.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +16,7 @@ class ListFilesButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void _listFiles() async {
-      var response = await listFilesRequest(
+      var response = await listFilesCommand(
           context.read<RequestNotifier>().pictureDownloadNumber);
 
       Map<dynamic, dynamic> jsonMap = jsonDecode(response);
