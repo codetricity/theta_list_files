@@ -53,20 +53,24 @@ concepts for third-party sites
 
 ### Architecture for thumbnail project
 
-Based on MVC+S as explained in gskinner article.
+Based on MVC+S as explained in gskinner article. Deviated from example by
+putting data structure for thumbnail in commands to make encapsulation
+of commands easier in the future.
 
 ![app architecture v3](docs/images/architecture_v4.png)
 
 * model
   * ChangeNotifiers (provider)
 * view
-  * gui sections
-    * screens and windows (portion of screen)
-  * gui components like buttons
-* controller
-  * manage the http response. build the data that is shown on the response window. send it to view.
-  * individual http API request templates that are triggered and populated from view
+  * screens
+  * sections (portion of screen)
+  * components like buttons
+* commands
+  * build the data that is shown on the response window. send it to view.
+  * individual commands that are triggered and populated from view
+  * data structures used by commands
 * services
+  * manage http request and pass response to commands
   * local storage (for example if on Windows desktop, the pictures folder)
   * fundamental http connection, error handling
   * firebase
