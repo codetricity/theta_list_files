@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lf/view/gui_sections/request/request_window.dart';
-import 'package:lf/view/gui_sections/response/response_window.dart';
+import 'package:lf/view/sections/request/request_window.dart';
+import 'package:lf/view/sections/response/response_window.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'models/response_notifier.dart';
 import 'package:provider/provider.dart';
 
-import 'view/gui_screens/image_screen.dart';
+import 'view/screens/image_screen.dart';
 import 'models/request_notifier.dart';
-import 'view/gui_screens/home_screen.dart';
+import 'view/screens/home_screen.dart';
 
 void main() {
   runApp(
