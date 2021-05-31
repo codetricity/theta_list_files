@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomeScreen(),
         '/image': (context) => ImageScreen(),
-        'admin': (context) => AdminScreen(),
+        '/admin': (context) => AdminScreen(),
       },
       initialRoute: '/',
     );

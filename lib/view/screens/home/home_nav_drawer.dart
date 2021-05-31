@@ -13,7 +13,9 @@ class HomeNavDrawer extends StatelessWidget {
         children: [
           ListTile(
             title: Text('camera admin'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/admin');
+            },
           ),
         ],
       ),

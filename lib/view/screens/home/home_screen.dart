@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lf/view/screens/home/home_screen_requests.dart';
 import 'package:lf/view/sections/request/request_window.dart';
 import 'package:lf/view/sections/response/response_window.dart';
 
@@ -19,7 +20,9 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          RequestWindow(),
+          RequestWindow(
+            requestWidget: HomeScreenRequests(),
+          ),
           ResponseWindow(),
         ],
       ),

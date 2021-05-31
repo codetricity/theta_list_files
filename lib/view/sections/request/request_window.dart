@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:lf/models/request_notifier.dart';
-import 'package:provider/provider.dart';
-
-import 'request_button_group.dart';
-import 'request_settings_window.dart';
+import 'package:lf/view/screens/home/home_screen_requests.dart';
 
 class RequestWindow extends StatelessWidget {
+  final Widget requestWidget;
+
   const RequestWindow({
     Key? key,
+    required this.requestWidget,
   }) : super(key: key);
 
   @override
@@ -17,23 +16,7 @@ class RequestWindow extends StatelessWidget {
       child: Container(
         width: double.infinity,
         color: Colors.lime[50],
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              height: 10,
-            ),
-            RequestButtonGroup(),
-            Text(
-              context
-                  .watch<RequestNotifier>()
-                  .pictureDownloadNumber
-                  .ceil()
-                  .toString(),
-            ),
-            RequestSettingsWindow(),
-          ],
-        ),
+        child: requestWidget,
       ),
     );
   }
