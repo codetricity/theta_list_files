@@ -107,6 +107,11 @@ of commands easier in the future.
     * local storage (for example if on Windows desktop, the pictures folder)
     * firebase
 
+![views](docs/images/views_v1.PNG)
+
+![home screen](docs/images/home_screen_files.png)
+
+
 ## Reference
 
 * [eBay Motors](https://medium.com/ebaytech/ebay-motors-state-management-bd85cfc602a2)
