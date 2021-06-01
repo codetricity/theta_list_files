@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:lf/commands/data_structure/thumb_info.dart';
-import 'package:lf/commands/list_files_command.dart';
+import 'package:lf/commands/list_files/list_files_command.dart';
 import 'package:lf/services/get_thumb_bytes_service.dart';
 
 Future<List<ThumbInfo>> getThumbBytes(double thumbNumber) async {

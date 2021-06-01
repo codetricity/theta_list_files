@@ -1,12 +1,8 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:lf/commands/get_thumb_bytes.dart';
-import 'package:lf/commands/list_files_command.dart';
+import 'package:lf/commands/list_files/list_files.dart';
+import 'package:lf/commands/list_files/list_thumbs.dart';
 import 'package:lf/models/request_notifier.dart';
-import 'package:lf/models/response_notifier.dart';
 import 'package:provider/provider.dart';
-
-import 'thumbnail.dart';
 
 class ListFilesButton extends StatelessWidget {
   const ListFilesButton({
@@ -15,47 +11,12 @@ class ListFilesButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void _listFiles() async {
-      var response = await listFilesCommand(
-          context.read<RequestNotifier>().pictureDownloadNumber);
-
-      Map<dynamic, dynamic> jsonMap = jsonDecode(response);
-      JsonEncoder encoder = JsonEncoder.withIndent('  ');
-
-      Widget responseText =
-          SingleChildScrollView(child: Text(encoder.convert(jsonMap)));
-
-      context
-          .read<ResponseNotifier>()
-          .updateResponseWindowContents(responseText);
-    }
-
-    void _listThumbs() async {
-      var thumbInfoList = await getThumbBytes(
-          context.read<RequestNotifier>().pictureDownloadNumber);
-      Widget responseWindowThumbGrid = GridView.builder(
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 300,
-              childAspectRatio: 2,
-              crossAxisSpacing: 3,
-              mainAxisSpacing: 3),
-          itemCount: thumbInfoList.length,
-          itemBuilder: (context, index) {
-            return ThumbNail(
-                thumbBytes: thumbInfoList[index].thumbBytes,
-                thumbUrl: thumbInfoList[index].url);
-          });
-      context
-          .read<ResponseNotifier>()
-          .updateResponseWindowContents(responseWindowThumbGrid);
-    }
-
     return TextButton(
       onPressed: () {
         if (context.read<RequestNotifier>().getThumbFlag) {
-          _listThumbs();
+          listThumbs(context);
         } else {
-          _listFiles();
+          listFiles(context);
         }
       },
       child: Text('list files'),
