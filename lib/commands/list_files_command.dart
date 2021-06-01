@@ -1,6 +1,6 @@
-import '../services/camera_request_service.dart';
+import '../services/commands_execute_service.dart';
 
-CameraRequest request = CameraRequest();
+CommandsExecuteService request = CommandsExecuteService();
 Future<String> listFilesCommand(double listFilesNumber) async {
   var body = {
     'name': 'camera.listFiles',

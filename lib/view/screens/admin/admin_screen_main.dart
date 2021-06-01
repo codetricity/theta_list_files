@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lf/view/screens/admin/admin_button_group.dart';
 import 'package:lf/view/sections/request/request_window.dart';
+import 'package:lf/view/sections/response/admin_response_window.dart';
 import 'package:lf/view/sections/response/response_window.dart';
 
 class AdminScreen extends StatelessWidget {
@@ -18,7 +19,7 @@ class AdminScreen extends StatelessWidget {
       body: Column(
         children: [
           RequestWindow(requestWidget: AdminButtonGroup()),
-          ResponseWindow(),
+          AdminResponseWindow(),
         ],
       ),
     );

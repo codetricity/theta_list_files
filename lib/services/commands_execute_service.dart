@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-class CameraRequest {
+class CommandsExecuteService {
   static const Map<String, String> _headers = {
     'Content-type': 'application/json; charset=UTF-8',
   };

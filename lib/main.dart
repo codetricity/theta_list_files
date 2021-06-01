@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lf/models/admin_response_notifier.dart';
 import 'package:lf/view/screens/admin/admin_screen_main.dart';
 import 'models/response_notifier.dart';
 import 'package:provider/provider.dart';
@@ -13,6 +14,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => RequestNotifier()),
         ChangeNotifierProvider(create: (_) => ResponseNotifier()),
+        ChangeNotifierProvider(create: (_) => AdminResponseNotifier()),
       ],
       child: MyApp(),
     ),
