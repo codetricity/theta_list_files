@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lf/view/components/list_files_button.dart';
+import 'list_files_button.dart';
 
 class HomeScreenButtonGroup extends StatelessWidget {
   const HomeScreenButtonGroup({
