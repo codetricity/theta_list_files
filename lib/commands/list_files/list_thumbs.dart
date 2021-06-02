@@ -17,8 +17,8 @@ void listThumbs(BuildContext context) async {
       itemCount: thumbInfoList.length,
       itemBuilder: (context, index) {
         return ThumbNail(
-            thumbBytes: thumbInfoList[index].thumbBytes,
-            thumbUrl: thumbInfoList[index].url);
+          thumbInfo: thumbInfoList[index],
+        );
       });
   context
       .read<ResponseNotifier>()

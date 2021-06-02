@@ -8,10 +8,11 @@ Future<List<ThumbInfo>> getThumbBytesService(List urlList) async {
   for (String url in urlList) {
     var thumbUrl = url + 'type=thumb';
     Uri uri = Uri.parse(thumbUrl);
+    String name = url.split('/').last;
     try {
       final imageData = await client.get(uri);
       thumbInfoList.add(
-        ThumbInfo(thumbBytes: imageData.bodyBytes, url: url),
+        ThumbInfo(thumbBytes: imageData.bodyBytes, url: url, name: name),
       );
     } catch (error) {
       print(error);
