@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lf/view/screens/admin/disable_sleep_button.dart';
 
 class AdminButtonGroup extends StatelessWidget {
   @override
@@ -6,10 +7,7 @@ class AdminButtonGroup extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        TextButton(
-          child: Text('button 1'),
-          onPressed: () {},
-        ),
+        DisableSleepButton(),
         TextButton(
           child: Text('button 2'),
           onPressed: () {},
