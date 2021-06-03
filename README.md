@@ -112,6 +112,8 @@ of commands easier in the future.
 ![home screen](docs/images/home_screen_files.png)
 
 
+![admin screen](docs/images/admin_screen.png)
+
 ## Reference
 
 * [eBay Motors](https://medium.com/ebaytech/ebay-motors-state-management-bd85cfc602a2)
