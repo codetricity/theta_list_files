@@ -32,11 +32,11 @@ and the most recent stable version of Flutter:
 * show example of http request/response state management using provider
   * alternative state management approaches under consideration: BLoC and GetX
 * produce sharable example of using thumbnails with the RICOH THETA SC2
-  * there is a bug in the API
+  * there is a bug in the API that prevents it from listing all thumbs in listFiles
 * improve separation of network and data processing code from the buttons in the gui
 * test http package, which has some limitations for RICOH THETA development
-  * digest authentication does not work with the THETA - not implemented in this app
-  * motionJPEG livePreview does not work with the V and Z1 - not implemented
+  * digest authentication with the Flutter http package does not work with the THETA - not implemented in this app
+  * motionJPEG livePreview withthe Flutter http package does not work with the V and Z1 - not implemented
 
 
 ## Planned Educational Assets to Help Developers
