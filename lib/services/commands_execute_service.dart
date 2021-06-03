@@ -11,7 +11,7 @@ class CommandsExecuteService {
 
   Future<String> execute(body) async {
     Uri uri = Uri.http(_domain, 'osc/commands/execute');
-    return await post(uri, body);
+    return await post(uri, jsonEncode(body));
   }
 
   Future<String> setOptions(Map<dynamic, dynamic> options) async {
@@ -22,10 +22,17 @@ class CommandsExecuteService {
     return await execute(body);
   }
 
-  Future<String> post(uri, body) async {
+  Future<String> getOptions(List<String> optionNames) async {
+    var body = {
+      'name': 'camera.getOptions',
+      'parameters': {'optionNames': optionNames}
+    };
+    return await execute(body);
+  }
+
+  Future<String> post(uri, String body) async {
     try {
-      var response =
-          await http.post(uri, headers: _headers, body: jsonEncode(body));
+      var response = await http.post(uri, headers: _headers, body: body);
       return response.body;
     } catch (error) {
       print('error');

@@ -5,16 +5,16 @@ import 'package:provider/provider.dart';
 
 import 'admin_status_indicator.dart';
 
-void disableSleep(BuildContext context) async {
+void disablePowerOff(BuildContext context) async {
   context.read<AdminResponseNotifier>().updateAdminResponse(
-        StatusIndicator(message: 'attempting to disable sleep'),
+        StatusIndicator(message: 'attempting to disable automatic power off'),
       );
 
   var command = CommandsExecuteService();
-  Map<String, int> options = {'sleepDelay': 65535};
+  Map<String, int> options = {'offDelay': 65535};
   String response = await command.setOptions(options);
   if (!response.toLowerCase().contains('error')) {
-    response = response + '\n turned sleep delay off';
+    response = response + '\n disabled automatic power off';
   }
   context.read<AdminResponseNotifier>().updateAdminResponse(Text(response));
 }
