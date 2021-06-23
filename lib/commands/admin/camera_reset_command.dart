@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lf/models/admin_response_notifier.dart';
 import 'package:provider/provider.dart';
 
-import 'admin_status_indicator.dart';
+import 'package:lf/view/shared_components/status_indicator.dart';
 import '../../services/commands_execute_service.dart';
 
 CommandsExecuteService request = CommandsExecuteService();
@@ -10,7 +10,7 @@ void cameraResetCommand(BuildContext context) async {
   var body = {'name': 'camera.reset', 'parameters': {}};
 
   context.read<AdminResponseNotifier>().updateAdminResponse(
-        StatusIndicator(message: 'attempting to disable automatic power off'),
+        StatusIndicator(message: 'attempting to reset camera settings'),
       );
 
   var response = await request.execute(body);

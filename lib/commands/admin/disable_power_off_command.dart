@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lf/models/admin_response_notifier.dart';
 import 'package:lf/services/commands_execute_service.dart';
 import 'package:provider/provider.dart';
-
-import 'admin_status_indicator.dart';
+import 'package:lf/view/shared_components/status_indicator.dart';
 
 void disablePowerOff(BuildContext context) async {
   context.read<AdminResponseNotifier>().updateAdminResponse(
