@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomeNavDrawer extends StatelessWidget {
   const HomeNavDrawer({
@@ -18,6 +17,13 @@ class HomeNavDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/admin');
             },
           ),
+          ListTile(
+            title: Text('take picture'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/takepicture');
+            },
+          )
         ],
       ),
     );

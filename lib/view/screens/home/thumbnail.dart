@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:lf/models/request_notifier.dart';
 import 'package:provider/provider.dart';
