@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lf/view/screens/take_picture/shutter_button.dart';
+import 'package:lf/view/screens/take_picture/take_picture_button.dart';
 
 class TakePictureButtonGroup extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class TakePictureButtonGroup extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ShutterButton(),
+            TakePictureButton(),
             Text('button 2'),
             Text('button 3'),
           ],
