@@ -8,6 +8,10 @@
 
 ![full size image with navigation](docs/images/full_size_image.gif)
 
+## Video Tutorial Introduction
+
+[RICOH THETA SC2 Developer Thumbnail Tutorial](https://youtu.be/QB7PiHJagFA)
+
 ## Project Overview
 
 Demonstration of using Flutter to communicate with the RICOH THETA 360 camera.
