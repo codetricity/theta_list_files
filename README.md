@@ -1,4 +1,12 @@
-# THETA List Files Demonstration
+# RICOH THETA SC2 List Files Demonstration
+
+This is a workaround for a bug in the RICOH THETA SC2
+[listFiles API command](https://api.ricoh/docs/theta-web-api-v2.1/commands/camera.list_files/).
+
+This demonstration will not work for the V or the Z1.  For those
+models, you can get the thumbnail data directly from
+the `camera.listFiles` API command if you specify the `maxThumbSize` as
+`640`.
 
 ## List Files and Thumbnails
 
