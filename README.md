@@ -12,6 +12,72 @@
 
 [RICOH THETA SC2 Developer Thumbnail Tutorial](https://youtu.be/QB7PiHJagFA)
 
+## Test Environment
+
+```json
+  "model": "RICOH THETA SC2",
+  "firmwareVersion": "01.64",
+```
+
+## Problem this Demo Addresses
+
+Bug in SC2 API prevents thumbnail data from returning with
+`camera.listFiles` if entryCount is more than one.
+
+With maxThumbSize set to `0` (no thumb), `entryCount` functions
+as expected.
+
+```dart
+Future<http.Response> listFiles() async {
+  var url = 'http://192.168.1.1/osc/commands/execute';
+  var data = {
+    'name': 'camera.listFiles',
+    'parameters': {
+      'fileType': 'image',
+      'entryCount': 10,
+      'maxThumbSize': 0,
+      '_detail': true,
+    }
+  };
+```
+
+Result shows array of 10 thumbs.
+
+```json
+      {
+        "name": "R0012013.JPG",
+        "fileUrl": "http://192.168.1.1/files/thetasc26c21a247d9055838792badc5/100RICOH/R0012013.JPG",
+        "size": 4121231,
+        "isProcessed": true,
+        "previewUrl": "",
+        "dateTimeZone": "2021:09:14 15:58:42-07:00",
+        "width": 5376,
+        "height": 2688,
+        "_thumbSize": 9688
+      }
+    ],
+    "totalEntries": 55
+  },
+  "state": "done"
+}
+```
+
+Setting maxThumbSize to `640` will only return a single thumbnail,
+not all 10 thumbnails inline. Only one entry is returned.
+
+To get all the thumbnails, you must get each thumbnail individually
+using the URL of the file.
+
+```json
+mlzj9mO8hQc4OfaneUuBwCaOdj9mhdqj0pcrjAqW7jUbC5HrS5B75qSgBpcgdD+VIYokA70eYAeDRYdw8wY65pC6kUWC4b1HSk8w0WHzhvHpz9KA/PbFFg5h3nAHkZ+hpPPU8bTj/e/wDrUuULgZR12H/vr/61JvOeF/M07BdH/9k="
+      }
+    ],
+    "totalEntries": 1
+  },
+  "state": "done"
+}
+```
+
 ## Project Overview
 
 Demonstration of using Flutter to communicate with the RICOH THETA 360 camera.
